@@ -1,7 +1,14 @@
-.body-login {
-    background-image: url(../images/backgroung-login.jpg);
+body {
+    background-image: url(../images/background.jpg);
     background-position: center;
     background-size: cover;
     height: 100vh;
     width: 100%;
 }
+
+
+
+/*CSS Login Page*/
+
+
+/*CSS Game page*/
