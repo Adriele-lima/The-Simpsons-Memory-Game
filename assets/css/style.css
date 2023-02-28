@@ -1,3 +1,12 @@
+@import url('https://fonts.googleapis.com/css2?family=PT+Sans+Caption&family=Press+Start+2P&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Press Start 2P', cursive;
+    text-decoration: none;
+}
+
 body {
     background-image: url(../images/background.jpg);
     background-position: center;
@@ -10,5 +19,51 @@ body {
 
 /*CSS Login Page*/
 
+#body-login {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#login-box {
+    display: flex;
+    padding: 20px;
+    flex-direction: column;
+    justify-content: center;
+    height: 400px;
+    width: 60%;
+    max-width: 500px;
+    border: 2px groove rgb(158, 158, 7);
+    background-color: rgba(255, 255, 1, 0.76);
+    border-radius: 15px;
+    box-shadow: 4px 4px 5px rgba(0, 0, 0, 0.63);
+    text-align: center;
+}
+
+h1 {
+    color: brown;
+    padding-bottom: 30px;
+    font-family: 'Press Start 2P', cursive;
+}
+
+#user-name {
+    margin-bottom: 10px;
+}
+
+#login-input {
+    height: 30px;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    background-color: lightyellow;
+}
+
+#submit-btn {
+    height: 30px;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    background-color: black;
+    color: bisque;
+    border: 1px solid bisque;
+}
 
 /*CSS Game page*/
