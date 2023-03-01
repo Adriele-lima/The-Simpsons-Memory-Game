@@ -83,13 +83,13 @@ h1 {
     height: 90vh;
     width: 90vh;
     background-color: aqua;
-    gap: 15PX;
+    gap: 10PX;
+    padding: 10px;
 }
 
 .cards {
     aspect-ratio: 3/4;
     width: 100%;
-    background-color: red;
     position: relative;
     transition: 1s;
     transform-style: preserve-3d;
@@ -105,10 +105,11 @@ h1 {
 
 .front {
     transform: rotateY(180deg);
+    background-color: rgb(255, 255, 255);
 }
 
 .back {
-    background-color: blue;
+    background-image: url(../images/back.jpeg);
     backface-visibility: hidden;
 }
 

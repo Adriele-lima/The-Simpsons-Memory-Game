@@ -8,16 +8,18 @@ let grid = document.getElementById('grid');
  * 
  * Create a new card on the HTML.
  */
-function createCard() {
+function createCard(characters) {
    
-    let card = document.createElement('div');
+    var card = document.createElement('div');
     card.className = 'cards';
 
-    let front = document.createElement('div');
+    var front = document.createElement('div');
     front.className = 'face front';
 
-    let back = document.createElement('div');
+    var back = document.createElement('div');
     back.className = 'face back';
+
+    front.style.backgroundImage = `url (../images/${characters}.png)`;
 
     card.appendChild(front);
     card.appendChild(back);
@@ -26,4 +28,29 @@ function createCard() {
     return card;
 } 
 
-createCard();
+let characters = [
+    'bart',
+    'lisa',
+    'maggie',
+    'marge',
+    'homer',
+    'moe',
+    'carl',
+    'lenny',
+    'cat',
+    'dog',
+]
+
+function loadGame (){
+    characters.forEach(function(card){
+        console.log(card);
+
+        var card = createCard(characters);
+        grid.appendChild(card);
+
+        
+    })
+}
+
+loadGame();
+
