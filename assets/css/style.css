@@ -99,7 +99,6 @@ h1 {
     aspect-ratio: 3/4;
     width: 100%;
     position: relative;
-    transition: 1s;
     transform-style: preserve-3d;
 }
 
@@ -122,6 +121,11 @@ h1 {
     backface-visibility: hidden;
 }
 
-.cards:hover {
+.cards:active {
+    transform: scale();
+    transition: 3s;
+}
+
+.cards.flip {
     transform: rotateY(180deg);
 }

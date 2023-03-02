@@ -3,10 +3,11 @@
 // JS - GAME
 
 let grid = document.getElementById('grid');
+let card = document.getElementsByClassName('cards');
 
 /**
  * 
- * Create a new card on the HTML.
+ * Create the DIVs on the HTML and assign the correct character's picture.
  */
 function createCard(character) {
    
@@ -24,6 +25,10 @@ function createCard(character) {
     grid.appendChild(card);
     card.appendChild(front);
     card.appendChild(back);
+
+    card.addEventListener('click', revealCard);
+    card.setAttribute('data-character', character)
+
     
     return card;
 } 
@@ -51,6 +56,9 @@ let characters = [
     'dog',
 ];
 
+/**
+ * Create all the cards to load the game.
+ */
 function loadGame (){
     
     characters.forEach(function(character){
@@ -62,3 +70,41 @@ function loadGame (){
 
 loadGame();
 
+let firstCard = "";
+let secondCard = "";
+
+/**
+ * Flip the cards if not flipped before.
+ */
+function revealCard(){
+           
+    if (firstCard === "") {
+        this.classList.add('flip');
+        firstCard = this;
+        return;
+    } else if (secondCard === "") {
+        this.classList.add('flip');
+        secondCard = this;
+        return;
+    }
+    
+    checkForMatch();
+  
+}
+
+/**
+ * Check if cards match,
+ * if match keep it flipped and clean the variables for the next card,
+ * if not cards will flip back.
+ */
+
+let firstCharacter = firstCard.getAttribute('data-character');
+let secondCharacter = secondCard.getAttribute('data-character');
+
+function checkCards(){
+    
+}
+
+function checkEndGame(){
+    
+}
