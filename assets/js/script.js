@@ -19,12 +19,12 @@ function createCard(character) {
     var back = document.createElement('div');
     back.className = 'face back';
 
-    front.style.backgroundImage = `url(../images/back.jpeg)`;
-
+    front.style.backgroundImage = `URL(../assets/images/${character}.png)`;
+    
+    grid.appendChild(card);
     card.appendChild(front);
     card.appendChild(back);
-    grid.appendChild(card);
-
+    
     return card;
 } 
 
@@ -52,13 +52,11 @@ let characters = [
 ];
 
 function loadGame (){
+    
     characters.forEach(function(character){
-        console.log(character);
-
-        var card = createCard(character);
-        grid.appendChild(card);
-
         
+        var card = createCard(character);
+          
     });
 }
 

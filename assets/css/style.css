@@ -71,6 +71,7 @@ h1 {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    margin-top: 30px;
 }
 
 .game-header {
@@ -81,7 +82,6 @@ h1 {
 
 .game-header h2 {
     display: flex;
-    flex-direction: row;
     justify-content: space-between;
 }
 
@@ -113,7 +113,8 @@ h1 {
 
 .front {
     transform: rotateY(180deg);
-    background-color: rgb(255, 255, 255);
+    background-size: cover;
+    background-position: center;
 }
 
 .back {
