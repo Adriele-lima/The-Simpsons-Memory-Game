@@ -72,6 +72,7 @@ loadGame();
 
 let firstCard = "";
 let secondCard = "";
+let disabledCard = [];
 
 /**
  * Flip the cards if not flipped before.
@@ -80,15 +81,15 @@ function revealCard(){
            
     if (firstCard === "") {
         this.classList.add('flip');
-        firstCard = this;
+        firstCard = this.dataset.character;
         return;
     } else if (secondCard === "") {
         this.classList.add('flip');
-        secondCard = this;
+        secondCard = this.dataset.character;
         return;
     }
     
-    checkForMatch();
+    checkCards();
   
 }
 
@@ -97,13 +98,28 @@ function revealCard(){
  * if match keep it flipped and clean the variables for the next card,
  * if not cards will flip back.
  */
-
-let firstCharacter = firstCard.getAttribute('data-character');
-let secondCharacter = secondCard.getAttribute('data-character');
-
 function checkCards(){
+    if (firstCard === secondCard) {
+        disabledCard.push(firstCard);
+        disabledCard.push(secondCard);
+ 
+        firstCard = "";
+        secondCard = "";
+
+        //checkEndGame();
+    } else {
+
+        card.classList.remove('flip');
+        card.classList.remove('flip');
+
+
+        firstCard = "";
+        secondCard = "";
+    }
+
     
 }
+
 
 function checkEndGame(){
     

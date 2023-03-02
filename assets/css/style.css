@@ -122,8 +122,8 @@ h1 {
 }
 
 .cards:active {
-    transform: scale();
-    transition: 3s;
+    transform: scale(0.97);
+    transition: 0.2s;
 }
 
 .cards.flip {
