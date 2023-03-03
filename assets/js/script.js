@@ -6,7 +6,6 @@ let grid = document.getElementById('grid');
 let card = document.getElementsByClassName('cards');
 
 /**
- * 
  * Create the DIVs on the HTML and assign the correct character's picture.
  */
 function createCard(character) {
@@ -78,49 +77,67 @@ let disabledCard = [];
  * Flip the cards if not flipped before.
  */
 function revealCard(){
-           
+
     if (firstCard === "") {
         this.classList.add('flip');
-        firstCard = this.dataset.character;
+        firstCard = this;
+        console.log('primeira')
+        console.log(firstCard)
+        console.log(this)
         return;
+        
     } else if (secondCard === "") {
         this.classList.add('flip');
-        secondCard = this.dataset.character;
-        return;
+        secondCard = this;
+        console.log('segunda')
+        console.log(secondCard)
+        console.log(this)
+        checkForMatch();
     }
-    
-    checkCards();
-  
+      
 }
 
 /**
- * Check if cards match,
- * if match keep it flipped and clean the variables for the next card,
- * if not cards will flip back.
+ * Check if cards match.
  */
-function checkCards(){
-    if (firstCard === secondCard) {
-        disabledCard.push(firstCard);
-        disabledCard.push(secondCard);
- 
-        firstCard = "";
-        secondCard = "";
+function checkForMatch(){
+    let itMatch = firstCard.dataset.character == secondCard.dataset.character;
 
-        //checkEndGame();
-    } else {
-
-        card.classList.remove('flip');
-        card.classList.remove('flip');
-
-
-        firstCard = "";
-        secondCard = "";
-    }
-
-    
+    itMatch ? blockCard() : unflipCard();
 }
 
-
-function checkEndGame(){
+/**
+ * if match keep it flipped and clean the variables for the next card.
+ */
+function blockCard(){
     
+    disabledCard.push(firstCard);
+    disabledCard.push(secondCard);
+    firstCard.removeEventListener('click', revealCard)
+    secondCard.removeEventListener('click', revealCard)
+ 
+    firstCard = "";
+    secondCard = "";
+
+    console.log('terceira')
+    //checkEndGame();
+}
+
+/**
+ * if it doesn't match cards will flip back also it will clean the variables.
+ */
+function unflipCard(){
+    setTimeout(() => {
+            
+        firstCard.classList.remove('flip');
+        secondCard.classList.remove('flip');
+
+
+        firstCard = ""; 
+        secondCard = "";
+        console.log('quarta')
+
+        console.log(firstCard)
+        console.log(secondCard)
+    }, '1000');
 }

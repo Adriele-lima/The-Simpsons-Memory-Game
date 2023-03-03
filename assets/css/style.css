@@ -100,6 +100,8 @@ h1 {
     width: 100%;
     position: relative;
     transform-style: preserve-3d;
+    transition: transform .5s;
+    transform: scale(1);
 }
 
 .face {
@@ -123,7 +125,7 @@ h1 {
 
 .cards:active {
     transform: scale(0.97);
-    transition: 0.2s;
+    transition: transform 0.2s;
 }
 
 .cards.flip {
