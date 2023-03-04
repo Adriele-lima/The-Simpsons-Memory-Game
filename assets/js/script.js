@@ -4,6 +4,7 @@
 
 let grid = document.getElementById('grid');
 let card = document.getElementsByClassName('cards');
+let shuffledCharacters = [];
 
 /**
  * Create the DIVs on the HTML and assign the correct character's picture.
@@ -60,7 +61,11 @@ let characters = [
  */
 function loadGame (){
     
-    characters.forEach(function(character){
+    shuffledCharacters = characters.sort(() => 
+      Math.floor(Math.random() + 1 * 19)
+    )
+
+    shuffledCharacters.forEach(function(character){
         
         var card = createCard(character);
           
@@ -81,6 +86,7 @@ function revealCard(){
     if (firstCard === "") {
         this.classList.add('flip');
         firstCard = this;
+        firstCard.removeEventListener('click', revealCard)
         console.log('primeira')
         console.log(firstCard)
         console.log(this)
@@ -120,7 +126,7 @@ function blockCard(){
     secondCard = "";
 
     console.log('terceira')
-    //checkEndGame();
+    checkEndGame();
 }
 
 /**
@@ -131,7 +137,7 @@ function unflipCard(){
             
         firstCard.classList.remove('flip');
         secondCard.classList.remove('flip');
-
+        firstCard.addEventListener('click', revealCard);
 
         firstCard = ""; 
         secondCard = "";
@@ -141,3 +147,13 @@ function unflipCard(){
         console.log(secondCard)
     }, '1000');
 }
+
+/**
+ * Check end Game.
+ */
+function checkEndGame(){
+    if (disabledCard.length == 20) {
+        window.alert('You did it!!')
+    }
+}
+
