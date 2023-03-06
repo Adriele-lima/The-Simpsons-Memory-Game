@@ -1,10 +1,12 @@
-// JS - LOGIN
-
-// JS - GAME
-
 let grid = document.getElementById('grid');
 let card = document.getElementsByClassName('cards');
 let shuffledCharacters = [];
+
+
+function timer () {
+    let currentTime = +timer.innerHTML;
+    this.loop
+}
 
 /**
  * Create the DIVs on the HTML and assign the correct character's picture.
@@ -57,15 +59,31 @@ let characters = [
 ];
 
 /**
+ * Shuffle the characters index.
+ */
+function shuffle(values) {
+    let index = values.length,
+      randomIndex;
+  
+    while (index != 0) {
+    
+      randomIndex = Math.floor(Math.random() * index);
+      index--;
+  
+      [values[index], values[randomIndex]] = [values[randomIndex], values[index]];
+    }
+  
+    return values;
+  }
+  
+shuffle(characters);
+
+/**
  * Create all the cards to load the game.
  */
 function loadGame (){
     
-    shuffledCharacters = characters.sort(() => 
-      Math.floor(Math.random() + 1 * 19)
-    )
-
-    shuffledCharacters.forEach(function(character){
+    characters.forEach(function(character){
         
         var card = createCard(character);
           

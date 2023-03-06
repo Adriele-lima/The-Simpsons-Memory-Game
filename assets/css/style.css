@@ -62,6 +62,12 @@ h1 {
     background-color: black;
     color: bisque;
     border: 1px solid bisque;
+    transition: .2s;
+}
+
+#submit-btn:hover {
+    background-color: rgb(172, 148, 118);
+    color: black;
 }
 
 /*CSS Game page*/
