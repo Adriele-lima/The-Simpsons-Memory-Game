@@ -72,33 +72,38 @@ h1 {
 
 /*CSS Game page*/
 
-#body-game {
+main {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin-top: 30px;
+    height: 100%;
 }
 
 .game-header {
     display: flex;
-    flex-direction: row;
-    margin: 30px;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    max-width: 800px;
+    background-color: blanchedalmond;
+    margin-bottom: 10px;
 }
 
-.game-header h2 {
+.game-header span {
     display: flex;
     justify-content: space-between;
+    align-items: center;
+    margin: 10px;
 }
 
 #grid {
     display: grid;
     grid-template-columns: repeat(5,1fr);
-    height: 900px;
-    width: 90vh;
+    width: 100%;
+    max-width: 800px;
     background-color: aqua;
     gap: 10PX;
-    padding: 10px;
 }
 
 .cards {

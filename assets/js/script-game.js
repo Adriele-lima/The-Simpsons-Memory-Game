@@ -1,11 +1,29 @@
 let grid = document.getElementById('grid');
 let card = document.getElementsByClassName('cards');
-let shuffledCharacters = [];
+let timer = document.getElementById('timer');
+let player = document.getElementById('player');
 
+/**
+ * Create timer.
+ */
+function startTimer() {
 
-function timer () {
-    let currentTime = +timer.innerHTML;
-    this.loop
+    setInterval(() => {
+
+        let currentTime = Number(timer.innerHTML);
+        timer.innerHTML = currentTime + 1;
+
+    }, 1000);
+}
+
+/**
+ * Loads player's name, timer and cards when browser is fully loaded.
+ */
+window.onload = () => {
+
+    player.innerHTML = localStorage.getItem('player');
+    startTimer();
+    loadGame();
 }
 
 /**
@@ -88,9 +106,8 @@ function loadGame (){
         var card = createCard(character);
           
     });
+    
 }
-
-loadGame();
 
 let firstCard = "";
 let secondCard = "";
