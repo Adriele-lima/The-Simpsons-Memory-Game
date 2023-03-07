@@ -87,7 +87,7 @@ main {
     width: 100%;
     max-width: 800px;
     background-color: blanchedalmond;
-    margin-bottom: 10px;
+    margin: 10px;
 }
 
 .game-header span {
@@ -104,6 +104,14 @@ main {
     max-width: 800px;
     background-color: aqua;
     gap: 10PX;
+}
+
+#restart-btn{
+    font-size: 8pt;
+    height: 30px;
+    width: 20%;
+    background-color: rgb(245, 234, 234);
+    margin: 5px 0 5px 0;
 }
 
 .cards {

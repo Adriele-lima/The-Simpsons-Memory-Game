@@ -2,6 +2,7 @@ let grid = document.getElementById('grid');
 let card = document.getElementsByClassName('cards');
 let timer = document.getElementById('timer');
 let player = document.getElementById('player');
+let restartButton = document.getElementById('restart-btn');
 
 /**
  * Create timer.
@@ -192,3 +193,9 @@ function checkEndGame(){
     }
 }
 
+restartButton.addEventListener('click', restartGame);
+
+function restartGame(){
+    startTimer();
+    window.location.reload(true);
+}
