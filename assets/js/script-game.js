@@ -41,7 +41,7 @@ function createCard(character) {
     var back = document.createElement('div');
     back.className = 'face back';
 
-    front.style.backgroundImage = `URL(../images/${character}.png)`;
+    front.style.backgroundImage = `URL(../assets/images/${character}.png)`;
     
     grid.appendChild(card);
     card.appendChild(front);
