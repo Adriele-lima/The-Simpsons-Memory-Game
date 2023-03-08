@@ -34,13 +34,13 @@ It's a memory game for all ages!
 
     - When I deployed my project to GitHub Pages I discovered that my game was broken, the links to images and JS did not work.
 
-    - I discovered that my JS was not working because I didn't link it correctly. The rel="script-game" was missing. 
+    - I discovered that my JS was not working because I didn't link it correctly. The rel="script-game"  was missing also the relative markup file. 
 
-    ![Javascript Bug]()
+    ![Javascript Bug](https://github.com/Adriele-lima/The-Simpsons-Memory-Game/blob/main/assets/images/error-2.jpg)
 
-    - I discovered that my images was not working because I didn't link it correctly. GitHub doesn't accept absolute files. 
+    - I discovered that my images was not working because I didn't link it correctly. GitHub doesn't accept absolute files. Just changed for relative markup file.
 
-    ![Images Bug]()
+    ![Images Bug](https://github.com/Adriele-lima/The-Simpsons-Memory-Game/blob/main/assets/images/error-3.jpg)
 
 ## Validator Testing
 
@@ -48,7 +48,7 @@ It's a memory game for all ages!
 
     - Only one error returned for [(W3C) validator](https://validator.w3.org/nu/?doc=https%3A%2F%2Fcode-institute-org.github.io%2Flove-running-2.0%2Findex.html)
 
-    - I added a closing tag for input and it's not necessary.
+    - I added a closing tag for input and it's not necessary. I removed that and then no error returned again.
 
 ![Error](https://github.com/Adriele-lima/The-Simpsons-Memory-Game/blob/main/assets/images/error.jpg)
 
