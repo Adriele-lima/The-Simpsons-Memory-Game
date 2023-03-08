@@ -77,7 +77,7 @@ It's a memory game for all ages!
     - On The section "Build and Deployment" select your branch on the dropdown menu and selec "main";
     - After save and wait a few minutes, the link for your live site will be on the top of the page.
 
-The live link can be found here [Let's Cook School](https://adriele-lima.github.io/The-Simpsons-Memory-Game/)
+The live link can be found here [The Simpsons - Memory Game](https://adriele-lima.github.io/The-Simpsons-Memory-Game/)
 
 ## Credits
 
