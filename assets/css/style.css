@@ -165,12 +165,21 @@ main {
 }
 
 @media screen and (max-width: 800px) {
+    
     .game-header span {
         font-size: 8pt;;
     }
 
     h1 {
         font-size: 15pt;
+    }
+
+    #login-box {
+        height: 250px;
+    }
+
+    #login-box label, button {
+        font-size: 10pt;
     }
 
     #body-login {
