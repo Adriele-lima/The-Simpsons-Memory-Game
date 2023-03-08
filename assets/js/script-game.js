@@ -25,7 +25,7 @@ window.onload = () => {
     player.innerHTML = localStorage.getItem('player');
     startTimer();
     loadGame();
-}
+};
 
 /**
  * Create the DIVs on the HTML and assign the correct character's picture.
@@ -48,7 +48,7 @@ function createCard(character) {
     card.appendChild(back);
 
     card.addEventListener('click', revealCard);
-    card.setAttribute('data-character', character)
+    card.setAttribute('data-character', character);
 
     
     return card;
@@ -122,7 +122,7 @@ function revealCard(){
     if (firstCard === "") {
         this.classList.add('flip');
         firstCard = this;
-        firstCard.removeEventListener('click', revealCard)
+        firstCard.removeEventListener('click', revealCard);
         return;
         
     } else if (secondCard === "") {
@@ -150,8 +150,8 @@ function blockCard(){
     
     disabledCard.push(firstCard);
     disabledCard.push(secondCard);
-    firstCard.removeEventListener('click', revealCard)
-    secondCard.removeEventListener('click', revealCard)
+    firstCard.removeEventListener('click', revealCard);
+    secondCard.removeEventListener('click', revealCard);
  
     firstCard = "";
     secondCard = "";
@@ -180,7 +180,7 @@ function unflipCard(){
  */
 function checkEndGame(){
     if (disabledCard.length == 20) {
-        window.alert('You did it!!')
+        window.alert('You did it!!');
     }
 }
 
