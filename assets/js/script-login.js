@@ -6,5 +6,5 @@ form.addEventListener('submit', setPlayer);
 function setPlayer(event) {
     event.preventDefault();
     localStorage.setItem('player', input.value);
-    window.location.href = './assets/js/script-game.js'
+    window.location = 'game.html'
 }
