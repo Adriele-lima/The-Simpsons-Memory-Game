@@ -23,7 +23,7 @@ function startTimer() {
 window.onload = () => {
 
     player.innerHTML = localStorage.getItem('player');
-    //startTimer();
+    startTimer();
     loadGame();
 }
 
