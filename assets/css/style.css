@@ -78,6 +78,7 @@ main {
     justify-content: center;
     align-items: center;
     height: 100%;
+    margin: 10px;
 }
 
 .game-header {
@@ -85,7 +86,7 @@ main {
     justify-content: space-between;
     align-items: center;
     width: 100%;
-    max-width: 800px;
+    max-width: 700px;
     background-color: blanchedalmond;
     margin: 10px;
 }
@@ -101,15 +102,17 @@ main {
     display: grid;
     grid-template-columns: repeat(5,1fr);
     width: 100%;
-    max-width: 800px;
+    max-width: 700px;
     background-color: aqua;
     gap: 10PX;
 }
 
 #restart-btn{
     font-size: 8pt;
+    padding: 5px;
     height: 30px;
     width: 20%;
+    min-width: 100px;
     background-color: rgb(245, 234, 234);
     margin: 5px 0 5px 0;
 }
@@ -149,4 +152,14 @@ main {
 
 .cards.flip {
     transform: rotateY(180deg);
+}
+
+@media screen and (max-width: 500px) {
+    .game-header span {
+        font-size: 8pt;;
+    }
+
+    h1 {
+        font-size: 15pt;
+    }
 }

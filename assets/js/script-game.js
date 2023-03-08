@@ -23,7 +23,7 @@ function startTimer() {
 window.onload = () => {
 
     player.innerHTML = localStorage.getItem('player');
-    startTimer();
+    //startTimer();
     loadGame();
 }
 
@@ -123,17 +123,12 @@ function revealCard(){
         this.classList.add('flip');
         firstCard = this;
         firstCard.removeEventListener('click', revealCard)
-        console.log('primeira')
-        console.log(firstCard)
-        console.log(this)
         return;
         
     } else if (secondCard === "") {
         this.classList.add('flip');
         secondCard = this;
-        console.log('segunda')
-        console.log(secondCard)
-        console.log(this)
+
         checkForMatch();
     }
       
@@ -161,7 +156,6 @@ function blockCard(){
     firstCard = "";
     secondCard = "";
 
-    console.log('terceira')
     checkEndGame();
 }
 
@@ -177,10 +171,7 @@ function unflipCard(){
 
         firstCard = ""; 
         secondCard = "";
-        console.log('quarta')
-
-        console.log(firstCard)
-        console.log(secondCard)
+        
     }, '1000');
 }
 
@@ -196,6 +187,5 @@ function checkEndGame(){
 restartButton.addEventListener('click', restartGame);
 
 function restartGame(){
-    startTimer();
     window.location.reload(true);
 }
