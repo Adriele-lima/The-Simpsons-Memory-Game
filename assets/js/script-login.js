@@ -6,6 +6,6 @@ form.addEventListener('submit', setPlayer);
 function setPlayer(event) {
     event.preventDefault();
     localStorage.setItem('player', input.value);
-    window.location.href = 'game.html';
+    window.location.href = '/game.html'
 }
 
