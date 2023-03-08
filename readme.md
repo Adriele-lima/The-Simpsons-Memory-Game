@@ -85,9 +85,9 @@ The live link can be found here [The Simpsons - Memory Game](https://adriele-lim
 
 - [W3School](https://www.w3schools.com/JSREF/)
 
-- [W3School](https://www.w3docs.com/snippets/javascript/how-to-randomize-shuffle-a-javascript-array.html)
+- [W3docs](https://www.w3docs.com/snippets/javascript/how-to-randomize-shuffle-a-javascript-array.html)
 
-- [W3School](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
+- [MDN](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
 
 - __Media__
 
