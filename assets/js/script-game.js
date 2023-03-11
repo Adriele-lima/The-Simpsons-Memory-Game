@@ -10,10 +10,8 @@ let restartButton = document.getElementById('restart-btn');
 function startTimer() {
 
     setInterval(() => {
-
         let currentTime = Number(timer.innerHTML);
         timer.innerHTML = currentTime + 1;
-
     }, 1000);
 }
 
@@ -34,10 +32,8 @@ function createCard(character) {
    
     var card = document.createElement('div');
     card.className = 'cards';
-
     var front = document.createElement('div');
     front.className = 'face front';
-
     var back = document.createElement('div');
     back.className = 'face back';
 
@@ -50,7 +46,6 @@ function createCard(character) {
     card.addEventListener('click', revealCard);
     card.setAttribute('data-character', character);
 
-    
     return card;
 } 
 
@@ -81,19 +76,18 @@ let characters = [
  * Shuffle the characters index.
  */
 function shuffle(values) {
+    
     let index = values.length,
       randomIndex;
   
     while (index != 0) {
-    
-      randomIndex = Math.floor(Math.random() * index);
-      index--;
-  
-      [values[index], values[randomIndex]] = [values[randomIndex], values[index]];
+        randomIndex = Math.floor(Math.random() * index);
+        index--;
+        [values[index], values[randomIndex]] = [values[randomIndex], values[index]];
     }
-  
+    
     return values;
-  }
+}
   
 shuffle(characters);
 
@@ -107,7 +101,6 @@ function loadGame (){
         var card = createCard(character);
           
     });
-    
 }
 
 let firstCard = "";
@@ -130,8 +123,7 @@ function revealCard(){
         secondCard = this;
 
         checkForMatch();
-    }
-      
+    }      
 }
 
 /**

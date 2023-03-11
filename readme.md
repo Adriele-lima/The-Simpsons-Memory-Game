@@ -18,6 +18,12 @@ It's a memory game for all ages!
 
 ![Game-Page](https://github.com/Adriele-lima/The-Simpsons-Memory-Game/blob/main/assets/images/game-page.jpg)
 
+- __Finish Game__
+
+    - When all the cards are flipped correctly, an alert message will apper saying "You did it!".
+
+![Finish-Game](https://github.com/Adriele-lima/The-Simpsons-Memory-Game/blob/main/assets/images/finish-game.jpg)
+
 ## Testing
 
 - I tested that this page works in differents browsers: Firefox and Microsoft Edge.
